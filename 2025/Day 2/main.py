@@ -1,6 +1,6 @@
 def part_one(ranges):
     print("Part One Solution: " + str(sum(value for start, end in [map(int, range.split('-')) for range in ranges.split(',')] for value in range(start, end + 1) 
-                                        if (lambda val:len(val) % 2 < 1 and val[:len(val) // 2] * 2 == val)(str(value)))))
+                                        if (lambda val: len(val) % 2 < 1 and val[:len(val) // 2] * 2 == val)(str(value)))))
 
 def part_two(ranges):
     print("Part Two Solution: " + str(sum(value for start, end in [map(int, range.split('-')) for range in ranges.split(',')] for value in range(start, end + 1)
