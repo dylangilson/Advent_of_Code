@@ -5,7 +5,7 @@ from itertools import groupby
 def part_one(lines):   
     rows = [line.split() for line in lines]
     
-    print("Part One Solution:", sum(sum(map(int, col)) if op == "+" else reduce(mul, map(int, col)) for col, op in zip(zip(*rows[:-1]), rows[-1])))
+    print("Part One Solution: " + str(sum(sum(map(int, col)) if op == "+" else reduce(mul, map(int, col)) for col, op in zip(zip(*rows[:-1]), rows[-1]))))
 
 def part_two(lines):
     ops = {"+": add, "*": mul}
